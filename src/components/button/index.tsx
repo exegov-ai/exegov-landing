@@ -6,7 +6,7 @@ interface IButton {
   modifier?: string;
 }
 
-const Button = ({ primary, modifier, children, ...rest }: IButton) => {
+function Button({ primary, modifier, children, ...rest }: IButton) {
   const baseStyle = `font-sans font-medium py-2 px-4 border rounded`;
   const styles = primary
     ? `bg-indigo-600 text-white border-indigo-500 hover:bg-indigo-700`
@@ -17,6 +17,6 @@ const Button = ({ primary, modifier, children, ...rest }: IButton) => {
       {children}
     </button>
   );
-};
+}
 
 export default Button;

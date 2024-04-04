@@ -23,7 +23,7 @@ const socialProofs = [
   },
 ];
 
-const SocialProof = () => {
+function SocialProof() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const next = () => {
@@ -105,6 +105,6 @@ const SocialProof = () => {
       </div>
     </div>
   );
-};
+}
 
 export default SocialProof;
