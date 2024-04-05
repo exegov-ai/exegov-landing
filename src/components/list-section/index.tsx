@@ -3,22 +3,33 @@ import FeatureSvg from '@/constants/svg/features.svg';
 
 const listItems = [
   {
-    title: `Designers`,
-    description: `Officia et fugiat mollit qui. Dolor elit aliqua voluptate ipsum
-    excepteur cillum consequat consectetur duis magna qui eu consequat occaecat.
-    Deserunt nisi sit.`,
+    title: `Business Plan Generator`,
+    description: `Jumpstart your venture with a solid foundation using our Business Plan Generator.
+     Transform your vision into a detailed, actionable business plan that outlines your pathway to success.
+    Whether you're seeking funding or simply setting strategic goals, our tool guides you through the process,
+     ensuring every critical aspect of your startup is covered.`,
   },
   {
-    title: `Developers`,
-    description: `Pariatur consectetur laboris exercitation duis laboris.
-    Commodo duis fugiat magna fugiat et ut anim elit. Tempor aute ex qui
-    tempor tempor.`,
+    title: `OKRs Generator`,
+    description: `Set objectives and key results that align with your vision and drive your team forward.
+    Our OKRs Generator simplifies the process of establishing, tracking, and achieving your key business outcomes. 
+    Foster a culture of accountability and continuous improvement as you scale.`,
   },
   {
-    title: `Product owners`,
-    description: `Ullamco consectetur ipsum eiusmod nisi adipisicing sint anim
-    dolore aute excepteur. Voluptate ea ullamco sunt eu elit qui aliquip.
-    Adipisicing.`,
+    title: `Task Generator & Manager`,
+    description: `Elevate your team's efficiency and focus with our advanced Task Generator and Manager,
+     designed to seamlessly integrate with your business’s OKRs.
+     This powerful feature doesn't just create tasks—it ensures that every task is strategically aligned
+     with your overarching objectives,
+     leveraging deep business insights to prioritize high-impact activities. With access to your business information,
+     the Task Generator ensures that every assignment is of the highest quality and relevance,
+     empowering your team to contribute meaningfully towards your company’s success.`,
+  },
+  {
+    title: `Kanban Board`,
+    description: `Visualize your workflow and enhance team collaboration with our Kanban Board.
+    This flexible tool supports Scrum and Kanban methodologies, making it easy to adapt to your team's needs.
+    Organize tasks, track progress, and identify bottlenecks early to keep your projects on track and under control.`,
   },
 ];
 
