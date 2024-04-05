@@ -71,9 +71,12 @@ function CasesSection() {
           <ParticleBg />
         </div>
         <div className={tw(`max-w-7xl mx-4 lg:mx-auto pt-20 lg:pt-40`)}>
-          <h1 className={tw(`text-white text-4xl lg:text-7xl font-bold text-center`)}>What will you build?</h1>
+          <h1 className={tw(`text-white text-4xl lg:text-7xl font-bold text-center`)}>
+            Ready to transform your startup&apos;s potential into performance?
+          </h1>
           <p className={tw(`text-white text-gray-400 text-center text-xl mt-12`)}>
-            Don’t just take our word for it — see what leaders in digital are saying
+            Join Exegov.ai today and take the first step towards streamlined operations, strategic growth, and
+            sustainable success.
           </p>
           <div className={tw(`mx-auto pt-24`)}>
             <div className={tw(`w-full flex flex-wrap justify-around`)}>

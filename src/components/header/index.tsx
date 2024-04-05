@@ -17,11 +17,14 @@ function Header() {
         <h1
           className={tw(`font-sans font-bold text-4xl md:text-5xl lg:text-8xl text-center leading-snug text-gray-800`)}
         >
-          Your website, beyond expectations
+          Welcome to exegov.ai : Empowering Your Startup Journey
         </h1>
         <div className={tw(`max-w-xl mx-auto`)}>
           <p className={tw(`mt-10 text-gray-500 text-center text-xl lg:text-3xl`)}>
-            Make your website wonderful and build beyond your expectations.
+            In the world of startups, every decision, every strategy, and every innovation counts. That&apos;s where
+            exegov.ai steps in—your AI-powered companion designed to navigate the complexities of growing your business.
+            From ideation to execution, exegov.ai equips you with the tools and insights you need to thrive in the
+            competitive startup landscape.
           </p>
         </div>
         <div className={tw(`mt-10 flex justify-center items-center w-full mx-auto`)}>

@@ -13,14 +13,18 @@ export default function Home() {
   return (
     <Page>
       <NextSeo
-        title="STARTD - Template"
-        description="A TypeScript/Next.js theme that includes everything you need to build amazing landing page!"
+        title="Exegov.ai - Empowering Your Startup Journey"
+        description="In the world of startups, every decision, every strategy, and every innovation counts.
+         That's where exegov.ai steps in—your 
+         AI-powered companion designed to navigate the complexities of growing your business.
+         From ideation to execution, exegov.ai equips you with the tools and insights you need
+         to thrive in the competitive startup landscape."
       />
       <Header />
       <main>
-        <VideoSection />
         <ListSection />
         <FeatureSection />
+        <VideoSection />
         <CasesSection />
         <SocialProof />
         <PricingTable />
