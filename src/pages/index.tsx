@@ -18,8 +18,8 @@ export default function Home() {
       />
       <Header />
       <main>
-        <VideoSection />
         <ListSection />
+        <VideoSection />
         <FeatureSection />
         <CasesSection />
         <SocialProof />
