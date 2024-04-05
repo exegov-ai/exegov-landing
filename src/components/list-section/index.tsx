@@ -39,7 +39,7 @@ function ListSection() {
       <div className={tw(`max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 bg-white`)}>
         <div className={tw(`mb-16 text-center`)}>
           <h2 className={tw(`text-base text-indigo-600 font-semibold tracking-wide uppercase`)}>Grow your revenue</h2>
-          <p className={tw(`mt-2 pb-4 text-5xl lg:text-7xl font-bold tracking-tight text-gray-900`)}>Why exegov.ai?</p>
+          <p className={tw(`mt-2 pb-4 text-5xl lg:text-7xl font-bold tracking-tight text-gray-900`)}>Features</p>
         </div>
         <div className={tw(`flex flex-wrap -mx-8 items-center`)}>
           <div className={tw(`w-full lg:w-1/2 px-8`)}>

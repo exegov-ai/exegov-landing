@@ -14,7 +14,11 @@ export default function Home() {
     <Page>
       <NextSeo
         title="Exegov.ai - Empowering Your Startup Journey"
-        description="In the world of startups, every decision, every strategy, and every innovation counts."
+        description="In the world of startups, every decision, every strategy, and every innovation counts.
+         That's where exegov.ai steps in—your 
+         AI-powered companion designed to navigate the complexities of growing your business.
+         From ideation to execution, exegov.ai equips you with the tools and insights you need
+         to thrive in the competitive startup landscape."
       />
       <Header />
       <main>
