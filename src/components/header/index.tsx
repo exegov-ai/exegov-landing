@@ -35,7 +35,9 @@ function Header() {
       </div>
       <div className={tw(`flex justify-center w-full`)}>
         <div className={tw(`mt-4 w-full`)}>
-          <p className={tw(`font-mono uppercase text-center font-medium text-sm text-gray-600`)}>These folks get it</p>
+          <p className={tw(`font-mono uppercase text-center font-medium text-sm text-gray-600`)}>
+            97.3% Satisfied Customers
+          </p>
           <div className={tw(`flex items-center justify-center mx-auto flex-wrap`)}>
             <Aws className={tw(`m-12 mb-8`)} width={120} />
             <Netlify className={tw(`m-12`)} width={140} />
