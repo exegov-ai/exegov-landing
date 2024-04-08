@@ -18,24 +18,16 @@ const links = [
     href: `/`,
   },
   {
-    label: `Testimonials`,
+    label: `Security`,
     href: `/`,
   },
   {
-    label: `Pricing`,
-    href: `/`,
-  },
-  {
-    label: `Blog`,
+    label: `Contacts us`,
     href: `/`,
   },
 ];
 
 const secondaryLinks = [
-  {
-    label: `Contact sales`,
-    href: `/`,
-  },
   {
     label: `Log in`,
     href: `/`,
@@ -124,16 +116,7 @@ function Navigation() {
         <div className={tw(`flex items-center justify-between h-24`)}>
           <div className={tw(`flex items-center`)}>
             <div className={tw(`flex-shrink-0`)}>
-              <img
-                className={tw(`h-12 w-12`)}
-                src="logo.svg"
-                alt="logo"
-                width={48}
-                height={48}
-                style={{
-                  filter: `invert(27%) sepia(95%) saturate(1352%) hue-rotate(202deg) brightness(89%) contrast(91%)`,
-                }}
-              />
+              <img className={tw(`h-12 w-12`)} src="logo.svg" alt="logo" width={48} height={48} />
             </div>
             <div className={tw(`hidden md:block`)}>
               <div className={tw(`ml-10 flex items-baseline space-x-4`)}>
@@ -151,7 +134,6 @@ function Navigation() {
           </div>
           <div className={tw(`hidden md:block`)}>
             <div className={tw(`ml-4 flex items-center md:ml-6`)}>
-              <Button modifier="border-0 mr-2">Contact sales</Button>
               <Button modifier="border-0 mr-2">Log in</Button>
               <Button primary>Get started</Button>
             </div>
