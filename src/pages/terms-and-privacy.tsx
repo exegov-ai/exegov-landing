@@ -25,7 +25,7 @@ export default function TermsAndPrivacy() {
       </header>
       <footer className={tw(`bg-white border-t border-gray-400 pt-14 pb-16`)}>
         <div className={tw(`max-w-7xl mx-auto text-gray-400 px-8 lg:px-0`)}>
-          <p className={tw(`text-center`)}>© 2022 Exegov.ai. All rights reserved.</p>
+          <p className={tw(`text-center`)}>© 2024 Exegov.ai. All rights reserved.</p>
         </div>
       </footer>
       <div className={tw(`text-center mt-4`)}>
