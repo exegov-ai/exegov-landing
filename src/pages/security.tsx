@@ -23,9 +23,7 @@ export default function Security() {
                 Exegov.ai
               </a>
               , we understand that the foundation of trust is built on the assurance of security. Our commitment to
-              protecting your information is paramount. That&apos;s why we&apos;ve chosen Amazon Web Services (AWS) as
-              our cloud infrastructure partner, leveraging their world-class security standards to ensure your data is
-              always safe with us.
+              protecting your information is paramount.
             </p>
           </div>
           <h2
@@ -40,8 +38,7 @@ export default function Security() {
             <p className={tw(`mt-10 text-gray-500 text-center text-xl lg:text-3xl`)}>
               AWS is a global leader in cloud computing, renowned for its robust, scalable, and secure infrastructure.
               By hosting Exegov.ai on AWS, we benefit from a network architected to protect your information,
-              identities, applications, and devices. Here’s how AWS security standards contribute to keeping your data
-              secure on Exegov.ai :
+              identities, applications, and devices.
             </p>
           </div>
           <h2
@@ -97,35 +94,6 @@ export default function Security() {
               AWS’s global network of data centers offers unmatched reliability and redundancy. In the unlikely event of
               a system failure, your data remains secure and accessible, minimizing downtime and ensuring business
               continuity.
-            </p>
-          </div>
-          <h2
-            className={tw(
-              `font-sans font-bold text-2xl md:text-3xl lg:text-6xl text-center leading-snug text-gray-800 mt-8`,
-            )}
-          >
-            Our Commitment to Your Security
-          </h2>
-          <div className={tw(`max-w-xl mx-auto`)}>
-            <p className={tw(`mt-10 text-gray-500 text-center text-xl lg:text-3xl`)}>
-              We’re dedicated to maintaining the highest standards of security and data protection. Our team
-              continuously monitors security systems, updates protocols, and adopts best practices to ensure the
-              integrity and confidentiality of your information. With http://Exegov.ai and AWS, you can focus on growing
-              your business, knowing your data is in safe hands.
-            </p>
-          </div>
-          <h2
-            className={tw(
-              `font-sans font-bold text-2xl md:text-3xl lg:text-6xl text-center leading-snug text-gray-800 mt-8`,
-            )}
-          >
-            Security Questions? We’re Here for You
-          </h2>
-          <div className={tw(`max-w-xl mx-auto`)}>
-            <p className={tw(`mt-10 text-gray-500 text-center text-xl lg:text-3xl`)}>
-              Your trust is important to us. If you have any questions about our security practices or how we protect
-              your data with AWS, please don’t hesitate to reach out. Our team is ready to provide you with the
-              information you need to feel secure and supported.
             </p>
           </div>
         </div>
