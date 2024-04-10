@@ -15,7 +15,7 @@ type Link = {
 const links = [
   {
     label: `Features`,
-    href: `/`,
+    href: `features`,
   },
   {
     label: `Security`,
@@ -110,6 +110,10 @@ function Navigation() {
   const [showMenu, setShowMenu] = useState(false);
   const toggleMenu = () => setShowMenu(!showMenu);
 
+  const scrollToSection = (event: React.MouseEvent, sectionId: string) => {
+    event.preventDefault();
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: `smooth` });
+  };
   return (
     <nav className={tw(`bg-white`)}>
       <div className={tw(`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`)}>
@@ -124,6 +128,7 @@ function Navigation() {
                   <a
                     key={link.label}
                     href={link.href}
+                    onClick={(event) => scrollToSection(event, link.href)}
                     className={tw(`text-gray-500 hover:text-gray-600 px-3 py-2 rounded-md font-medium`)}
                   >
                     {link.label}
