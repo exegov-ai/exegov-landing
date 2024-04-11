@@ -1,4 +1,8 @@
 import { tw } from 'twind';
+import Facebook from '@/constants/svg/facebook.svg';
+import Linkedin from '@/constants/svg/linkedin.svg';
+import Twitter from '@/constants/svg/twitterx.svg';
+import Github from '@/constants/svg/github.svg';
 
 function Footer() {
   return (
@@ -11,7 +15,21 @@ function Footer() {
           </p>
         </div>
       </div>
-      {/* TODO add social logos */}
+      <div className={tw(`ml-auto flex items-center`)}>
+        <a href="https://www.facebook.com/your-facebook-page" className={tw(`ml-4`)} aria-label="fb">
+          <Facebook width={24} height={24} />
+        </a>
+        <a href="https://www.linkedin.com/your-linkedin-page" className={tw(`ml-4`)} aria-label="linkedin">
+          <Linkedin width={24} height={24} />
+        </a>
+        <a href="https://twitter.com/your-ct" className={tw(`ml-4`)} aria-label="x.com">
+          <Twitter width={24} height={24} />
+        </a>
+        <a href="https://github.com/exegov-ai" className={tw(`ml-4`)} aria-label="GitHub">
+          <Github width={24} height={24} />
+        </a>
+      </div>
+      {` `}
     </footer>
   );
 }
