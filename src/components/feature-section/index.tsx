@@ -1,5 +1,27 @@
 import { tw } from 'twind';
 import Check from '@/constants/svg/check.svg';
+import CoolItem from '@/components/cool-items';
+
+const features = [
+  {
+    title: `AI-Driven Insights:`,
+    description: `Leverage the power of AI to gain actionable insights 
+    tailored to your startup's unique challenges opportunities.`,
+    Icon: Check,
+  },
+  {
+    title: `Comprehensive Support`,
+    description: `From strategy to product management,
+     and finance to marketing, exegov.ai covers all the bases, ensuring you have the tools to succeed.`,
+    Icon: Check,
+  },
+  {
+    title: `Scalable Solutions`,
+    description: `Our platform grows with you,
+     providing the resources and flexibility you need at every stage of your startup journey.`,
+    Icon: Check,
+  },
+];
 
 function FeatureSection() {
   return (
@@ -13,36 +35,14 @@ function FeatureSection() {
             </p>
           </div>
           <div className={tw(`flex flex-wrap my-12`)}>
-            <div className={tw(`w-full border-b md:w-1/2 md:border-r lg:w-1/3 p-8`)}>
-              <div className={tw(`flex items-center mb-6`)}>
-                <Check width={20} height={20} fill="currentColor" className={tw(`h-6 w-6 text-indigo-500`)} />
-                <div className={tw(`ml-4 text-xl`)}>AI-Driven Insights:</div>
-              </div>
-              <p className={tw(`leading-loose text-gray-500`)}>
-                Leverage the power of AI to gain actionable insights tailored to your startup&apos;s unique challenges
-                opportunities.
-              </p>
-            </div>
-            <div className={tw(`w-full border-b md:w-1/2 lg:w-1/3 lg:border-r p-8`)}>
-              <div className={tw(`flex items-center mb-6`)}>
-                <Check width={20} height={20} fill="currentColor" className={tw(`h-6 w-6 text-indigo-500`)} />
-                <div className={tw(`ml-4 text-xl`)}>Comprehensive Support</div>
-              </div>
-              <p className={tw(`leading-loose text-gray-500 `)}>
-                From strategy to product management, and finance to marketing, exegov.ai covers all the bases, ensuring
-                you have the tools to succeed.
-              </p>
-            </div>
-            <div className={tw(`w-full border-b md:w-1/2 md:border-r lg:w-1/3 lg:border-r-0 p-8`)}>
-              <div className="flex items-center mb-6">
-                <Check width={20} height={20} fill="currentColor" className={tw(`h-6 w-6 text-indigo-500`)} />
-                <div className={tw(`ml-4 text-xl`)}>Scalable Solutions</div>
-              </div>
-              <p className={tw(`leading-loose text-gray-500`)}>
-                Our platform grows with you, providing the resources and flexibility you need at every stage of your
-                startup journey.
-              </p>
-            </div>
+            {features.map((feature) => (
+              <CoolItem
+                key={feature.title}
+                title={feature.title}
+                description={feature.description}
+                Icon={feature.Icon}
+              />
+            ))}
           </div>
         </div>
       </div>
