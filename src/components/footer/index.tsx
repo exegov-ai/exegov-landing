@@ -4,6 +4,7 @@ import Linkedin from '@/constants/svg/linkedin.svg';
 import Twitter from '@/constants/svg/twitterx.svg';
 import Github from '@/constants/svg/github.svg';
 import { EXEGOV_BLUE } from '@/constants/values/colors';
+import FlexBrands from '@/components/flex-brands';
 
 function Footer() {
   return (
@@ -15,20 +16,17 @@ function Footer() {
             Exegov.ai
           </p>
         </div>
-        <div className={tw(`flex items-center`)} style={{ fill: EXEGOV_BLUE }}>
-          <a href="https://www.facebook.com/your-facebook-page" className={tw(`ml-4`)} aria-label="fb">
-            <Facebook />
-          </a>
-          <a href="https://www.linkedin.com/your-linkedin-page" className={tw(`ml-4`)} aria-label="linkedin">
-            <Linkedin />
-          </a>
-          <a href="https://twitter.com/your-ct" className={tw(`ml-4`)} aria-label="x.com">
-            <Twitter />
-          </a>
-          <a href="https://github.com/exegov-ai" className={tw(`ml-4`)} aria-label="GitHub">
-            <Github />
-          </a>
-        </div>
+        <FlexBrands
+          brands={{
+            fill: EXEGOV_BLUE,
+            items: [
+              { icon: Facebook, url: `https://www.facebook.com/your-facebook-page`, label: `fb` },
+              { icon: Linkedin, url: `https://www.linkedin.com/your-linkedin-page`, label: `linkedin` },
+              { icon: Twitter, url: `https://twitter.com/your-ct`, label: `x.com` },
+              { icon: Github, url: `https://github.com/exegov-ai`, label: `GitHub` },
+            ],
+          }}
+        />
       </div>
     </footer>
   );
