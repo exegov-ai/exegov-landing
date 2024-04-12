@@ -8,8 +8,14 @@ import { EXEGOV_BLUE } from '@/constants/values/colors';
 function Footer() {
   return (
     <footer className={tw(`bg-white border-t border-gray-400 pt-14 pb-16`)}>
-      <div className={tw(`max-w-7xl mx-auto text-gray-400 px-8 lg:px-0 flex flex-wrap`)}>
-        <div className={tw(`ml-auto flex items-center`)} style={{ color: EXEGOV_BLUE, fill: EXEGOV_BLUE }}>
+      <div className={tw(`max-w-7xl mx-auto text-gray-400 px-8 lg:px-0 flex items-center justify-between`)}>
+        <div className={tw(`flex items-center`)}>
+          <img className={tw(`h-12 w-12 mr-4`)} src="logo.svg" alt="logo" width={48} height={48} />
+          <p className={tw(`text-4xl text-indigo-500 font-bold`)} style={{ color: EXEGOV_BLUE }}>
+            Exegov.ai
+          </p>
+        </div>
+        <div className={tw(`flex items-center`)}>
           <a href="https://www.facebook.com/your-facebook-page" className={tw(`ml-4`)} aria-label="fb">
             <Facebook />
           </a>
@@ -22,12 +28,6 @@ function Footer() {
           <a href="https://github.com/exegov-ai" className={tw(`ml-4`)} aria-label="GitHub">
             <Github />
           </a>
-        </div>
-        <div className={tw(`mb-14 flex items-center w-full`)}>
-          <img className={tw(`h-12 w-12 mr-4`)} src="logo.svg" alt="logo" width={48} height={48} />
-          <p className={tw(`text-4xl text-indigo-500 font-bold`)} style={{ color: EXEGOV_BLUE }}>
-            Exegov.ai
-          </p>
         </div>
       </div>
     </footer>
