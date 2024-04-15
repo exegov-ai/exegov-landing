@@ -4,7 +4,6 @@ import Header from '@/components/header';
 import VideoSection from '@/components/video-section';
 import ListSection from '@/components/list-section';
 import FeatureSection from '@/components/feature-section';
-import CasesSection from '@/components/cases-section';
 import ContactSection from '@/components/contact-us';
 import Footer from '@/components/footer';
 import SecuritySection from '@/components/security-secion';
@@ -22,12 +21,11 @@ export default function Home() {
       />
       <Header />
       <main>
+        <VideoSection />
         <ListSection />
         <FeatureSection />
         <SecuritySection />
-        <VideoSection />
         <ContactSection />
-        <CasesSection />
       </main>
       <Footer />
     </Page>

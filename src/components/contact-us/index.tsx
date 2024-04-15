@@ -1,6 +1,5 @@
 import { tw } from 'twind';
 import Check from '@/constants/svg/check.svg';
-import Button from '@/components/button';
 
 type ContactFeature = {
   header: string;
@@ -78,20 +77,6 @@ function ContactSection() {
                 ))}
               </ul>
             </div>
-          </div>
-          <div
-            className={tw(
-              `py-8 px-6 text-center lg:flex-shrink-0
-            lg:flex lg:flex-col lg:justify-center lg:p-12`,
-            )}
-          >
-            <p className={tw(`text-lg font-medium text-gray-800`)}>If you order now...</p>
-            <div className={tw(`my-4 flex items-center justify-center text-6xl leading-none font-bold text-gray-800`)}>
-              $99/mo
-            </div>
-            <Button primary modifier="mt-6">
-              Contact sales
-            </Button>
           </div>
         </div>
       </div>
