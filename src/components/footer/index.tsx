@@ -8,7 +8,7 @@ import FlexBrands from '@/components/flex-brands';
 
 function Footer() {
   return (
-    <footer className={tw(`bg-white border-t border-gray-400 pt-14 pb-16`)}>
+    <footer id="contact" className={tw(`bg-white border-t border-gray-400 pt-14 pb-16`)}>
       <div className={tw(`max-w-7xl mx-auto text-gray-400 px-8 lg:px-0 flex flex-wrap items-center justify-between`)}>
         <div className={tw(`flex items-center mb-4 lg:mb-0`)}>
           <img className={tw(`h-12 w-12 mr-4`)} src="logo.svg" alt="logo" width={48} height={48} />

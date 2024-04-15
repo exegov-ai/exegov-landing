@@ -19,11 +19,11 @@ const links = [
   },
   {
     label: `Security`,
-    href: `/`,
+    href: `security`,
   },
   {
     label: `Contacts us`,
-    href: `/`,
+    href: `contact`,
   },
 ];
 
