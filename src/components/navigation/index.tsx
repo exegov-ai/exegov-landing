@@ -140,7 +140,7 @@ function Navigation() {
           <div className={tw(`hidden md:block`)}>
             <div className={tw(`ml-4 flex items-center md:ml-6`)}>
               <a href="https://exegov.selleo.dev/users/sign_in" target="_blank" rel="noopener noreferrer">
-                <Button modifier="border-0 mr-2">Log in</Button>,
+                <Button modifier="border-0 mr-2">Log in</Button>
               </a>
               <a href="https://exegov.selleo.dev/users/sign_up" target="_blank" rel="noopener noreferrer">
                 <Button primary>Get started</Button>
