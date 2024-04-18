@@ -24,21 +24,6 @@ const securityFeatures = [
       safeguarding your information from unauthorized access.`,
     Icon: Check,
   },
-  {
-    title: `Continuous Monitoring and Protection`,
-    description: `AWS’s infrastructure provides continuous monitoring and real-time protection
-     against threats and vulnerabilities. 
-     This proactive stance on security ensures that any potential risks are identified and mitigated swiftly,
-      keeping your data safe 24/7.`,
-    Icon: Check,
-  },
-  {
-    title: `Reliability and Resilience`,
-    description: `AWS’s global network of data centers offers unmatched reliability and redundancy.
-     In the unlikely event of a system failure, your data remains secure and accessible,
-      minimizing downtime and ensuring business continuity.`,
-    Icon: Check,
-  },
 ];
 
 function SecuritySection() {
