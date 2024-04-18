@@ -1,5 +1,6 @@
 import { tw } from 'twind';
 import Check from '@/constants/svg/check.svg';
+import Button from '@/components/button';
 
 type ContactFeature = {
   header: string;
@@ -51,7 +52,14 @@ function ContactSection() {
                 </div>
                 <div className={tw(`flex-1 border-t-2 border-gray-200`)} />
               </div>
-              <div>
+              <div className={tw(`mt-8`)}>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSc6KxzwQhhqM9P8UjEBLwzfUWhqUlJg4VthNJlVWariu8mivw/viewform?usp=sf_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button primary>Feedback</Button>
+                </a>
                 <p className={tw(`mt-4 text-sm text-gray-700`)}>
                   Have feedback or suggestions? Encountered a bug within our tool? Or simply have a question about how
                   {` `}

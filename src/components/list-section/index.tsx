@@ -3,20 +3,20 @@ import FeatureSvg from '@/constants/svg/features.svg';
 
 const listItems = [
   {
-    title: `Business Plan Generator`,
+    title: `Business Plan AI Helper`,
     description: `Jumpstart your venture with a solid foundation using our Business Plan Generator.
      Transform your vision into a detailed, actionable business plan that outlines your pathway to success.
     Whether you're seeking funding or simply setting strategic goals, our tool guides you through the process,
      ensuring every critical aspect of your startup is covered.`,
   },
   {
-    title: `OKRs Generator`,
+    title: `OKRs AI Generator`,
     description: `Set objectives and key results that align with your vision and drive your team forward.
     Our OKRs Generator simplifies the process of establishing, tracking, and achieving your key business outcomes. 
     Foster a culture of accountability and continuous improvement as you scale.`,
   },
   {
-    title: `Task Generator & Manager`,
+    title: `AI Assisted Task Manager`,
     description: `Elevate your team's efficiency and focus with our advanced Task Generator and Manager,
      designed to seamlessly integrate with your business’s OKRs.
      This powerful feature doesn't just create tasks—it ensures that every task is strategically aligned
