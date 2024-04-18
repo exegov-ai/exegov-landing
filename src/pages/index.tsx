@@ -7,6 +7,7 @@ import FeatureSection from '@/components/feature-section';
 import ContactSection from '@/components/contact-us';
 import Footer from '@/components/footer';
 import SecuritySection from '@/components/security-secion';
+import { tw } from 'twind';
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
          to thrive in the competitive startup landscape."
       />
       <Header />
-      <main>
+      <main className={tw(`mt-0`)}>
         <VideoSection />
         <ListSection />
         <FeatureSection />
