@@ -7,10 +7,15 @@ interface IMenuButton {
   showMenu: boolean;
 }
 
+type ScrollToSection = (event: React.MouseEvent, sectionId: string) => void;
+
 type Link = {
   label: string;
   href: string;
 };
+
+const loginUrl = `https://exegov.selleo.dev/users/sign_in`;
+const signUpUrl = `https://exegov.selleo.dev/users/sign_up`;
 
 const links = [
   {
@@ -30,11 +35,11 @@ const links = [
 const secondaryLinks = [
   {
     label: `Log in`,
-    href: `/`,
+    href: loginUrl,
   },
   {
     label: `Get Started`,
-    href: `/`,
+    href: signUpUrl,
   },
 ];
 
@@ -79,12 +84,17 @@ function MenuButton({ toggleMenu, showMenu }: IMenuButton) {
   );
 }
 
-function MobileMenu() {
+function MobileMenu({ scrollToSection }: { scrollToSection: ScrollToSection }) {
   return (
     <div className={tw(`md:hidden`)}>
       <div className={tw(`px-2 pt-2 pb-3 space-y-1 sm:px-3`)}>
         {links.map((link: Link) => (
-          <a href={link.href} className={tw(`text-gray-500 block px-3 py-2 text-base font-medium`)} key={link.label}>
+          <a
+            href={link.href}
+            onClick={(event) => scrollToSection(event, link.href)}
+            className={tw(`text-gray-500 block px-3 py-2 text-base font-medium`)}
+            key={link.label}
+          >
             {link.label}
           </a>
         ))}
@@ -110,7 +120,7 @@ function Navigation() {
   const [showMenu, setShowMenu] = useState(false);
   const toggleMenu = () => setShowMenu(!showMenu);
 
-  const scrollToSection = (event: React.MouseEvent, sectionId: string) => {
+  const scrollToSection: ScrollToSection = (event, sectionId) => {
     event.preventDefault();
     document.getElementById(sectionId)?.scrollIntoView({ behavior: `smooth` });
   };
@@ -139,10 +149,10 @@ function Navigation() {
           </div>
           <div className={tw(`hidden md:block`)}>
             <div className={tw(`ml-4 flex items-center md:ml-6`)}>
-              <a href="https://exegov.selleo.dev/users/sign_in" target="_blank" rel="noopener noreferrer">
+              <a href={loginUrl} target="_blank" rel="noopener noreferrer">
                 <Button modifier="border-0 mr-2">Log in</Button>
               </a>
-              <a href="https://exegov.selleo.dev/users/sign_up" target="_blank" rel="noopener noreferrer">
+              <a href={signUpUrl} target="_blank" rel="noopener noreferrer">
                 <Button primary>Get started</Button>
               </a>
             </div>
@@ -152,7 +162,8 @@ function Navigation() {
           </div>
         </div>
       </div>
-      {showMenu ? <MobileMenu /> : null}
+      {showMenu ? <MobileMenu scrollToSection={scrollToSection} /> : null}
+      {` `}
     </nav>
   );
 }
