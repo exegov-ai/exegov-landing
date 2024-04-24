@@ -14,8 +14,8 @@ type Link = {
   href: string;
 };
 
-const loginUrl = `https://exegov.selleo.dev/users/sign_in`;
-const signUpUrl = `https://exegov.selleo.dev/users/sign_up`;
+const loginUrl = `https://app.exegov.ai/users/sign_in`;
+const signUpUrl = `https://app.exegov.ai/users/sign_up`;
 
 const links = [
   {
