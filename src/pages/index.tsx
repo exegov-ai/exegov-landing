@@ -3,7 +3,7 @@ import Page from '@/components/page';
 import Header from '@/components/header';
 import VideoSection from '@/components/video-section';
 import ListSection from '@/components/list-section';
-import FeatureSection from '@/components/feature-section';
+import WhySection from '@/components/why-section';
 import ContactSection from '@/components/contact-us';
 import Footer from '@/components/footer';
 import SecuritySection from '@/components/security-secion';
@@ -21,7 +21,7 @@ export default function Home() {
       <main className={tw(`mt-0`)}>
         <VideoSection />
         <ListSection />
-        <FeatureSection />
+        <WhySection />
         <SecuritySection />
         <ContactSection />
       </main>
