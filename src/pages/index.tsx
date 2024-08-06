@@ -13,12 +13,9 @@ export default function Home() {
   return (
     <Page>
       <NextSeo
-        title="Exegov.ai - Empowering Your Startup Journey"
-        description="In the world of startups, every decision, every strategy, and every innovation counts.
-         That's where exegov.ai steps in—your 
-         AI-powered companion designed to navigate the complexities of growing your business.
-         From ideation to execution, exegov.ai equips you with the tools and insights you need
-         to thrive in the competitive startup landscape."
+        title="Exegov.ai - Your Trusted Partner in Business Growth"
+        description="Combining traditional consulting expertise with cutting-edge AI technology
+         to support your growth and success at every stage."
       />
       <Header />
       <main className={tw(`mt-0`)}>
