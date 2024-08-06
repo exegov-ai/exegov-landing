@@ -18,9 +18,9 @@ export default function Home() {
       />
       <Header />
       <main className={tw(`mt-0`)}>
-        <VideoSection />
         <ListSection />
         <WhySection />
+        <VideoSection />
         <ContactSection />
       </main>
       <Footer />
