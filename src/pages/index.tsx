@@ -6,7 +6,6 @@ import ListSection from '@/components/list-section';
 import WhySection from '@/components/why-section';
 import ContactSection from '@/components/contact-us';
 import Footer from '@/components/footer';
-import SecuritySection from '@/components/security-secion';
 import { tw } from 'twind';
 
 export default function Home() {
@@ -22,7 +21,6 @@ export default function Home() {
         <VideoSection />
         <ListSection />
         <WhySection />
-        <SecuritySection />
         <ContactSection />
       </main>
       <Footer />
