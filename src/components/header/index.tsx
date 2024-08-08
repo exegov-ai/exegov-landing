@@ -4,20 +4,12 @@ import Aragon from '@/constants/svg/aragon.svg';
 import Fiserv from '@/constants/svg/Fiserv_logo.svg';
 import TenClouds from '@/constants/svg/10clouds.svg';
 import Orange from '@/constants/svg/Orange.svg';
-import { ReactNode } from 'react';
 
 const headerStyle = css`
   background-color: #ffffff;
   margin-bottom: 0;
 `;
 
-interface LogoWrapperProps {
-  children: ReactNode;
-}
-
-function LogoWrapper({ children }: LogoWrapperProps) {
-  return <div className={tw(`w-30 h-30 flex items-center justify-center overflow-hidden`)}>{children}</div>;
-}
 function Header() {
   return (
     <header className={tw(headerStyle)}>
@@ -37,24 +29,14 @@ function Header() {
         </div>
       </div>
       <div className={tw(`flex justify-center w-full`)}>
-        <div className={tw(`mt-4 w-full`)}>
+        <div className={tw(`mt-4 w-50`)}>
           <p className={tw(`font-mono uppercase text-center font-medium text-sm text-gray-600`)}>Trusted by</p>
-          <div className={tw(`flex items-center justify-center mx-auto flex-wrap`)}>
-            <LogoWrapper>
-              <Aragon className={tw(`m-12 mb-8`)} style={{ width: `100%`, height: `100%`, objectFit: `contain` }} />
-            </LogoWrapper>
-            <LogoWrapper>
-              <Bnp className={tw(`m-12 mb-8`)} style={{ width: `100%`, height: `100%`, objectFit: `contain` }} />
-            </LogoWrapper>
-            <LogoWrapper>
-              <Fiserv className={tw(`m-12 mb-8`)} style={{ width: `100%`, height: `100%`, objectFit: `contain` }} />
-            </LogoWrapper>
-            <LogoWrapper>
-              <TenClouds className={tw(`m-12 mb-8`)} style={{ width: `100%`, height: `100%`, objectFit: `contain` }} />
-            </LogoWrapper>
-            <LogoWrapper>
-              <Orange className={tw(`m-12 mb-8`)} style={{ width: `100%`, height: `100%`, objectFit: `contain` }} />
-            </LogoWrapper>
+          <div className={tw(`grid grid-cols-2 gap-20 justify-items-center align-items-center`)}>
+            <Aragon className={tw(`h-30`)} />
+            <Bnp className={tw(`h-30`)} />
+            <Fiserv className={tw(`h-30`)} />
+            <TenClouds className={tw(`h-30`)} />
+            <Orange className={tw(`h-30`)} />
           </div>
         </div>
       </div>
