@@ -32,11 +32,11 @@ function Header() {
         <div className={tw(`mt-4 w-50`)}>
           <p className={tw(`font-mono uppercase text-center font-medium text-sm text-gray-600`)}>Trusted by</p>
           <div className={tw(`grid grid-cols-2 gap-20 justify-items-center align-items-center`)}>
-            <Aragon className={tw(`h-30`)} />
-            <Bnp className={tw(`h-30`)} />
-            <Fiserv className={tw(`h-30`)} />
-            <TenClouds className={tw(`h-30`)} />
-            <Orange className={tw(`h-30`)} />
+            <Aragon />
+            <Bnp />
+            <Fiserv />
+            <TenClouds />
+            <Orange />
           </div>
         </div>
       </div>
