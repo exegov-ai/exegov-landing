@@ -12,7 +12,7 @@ const services = [
   },
   {
     title: `Business Scaling`,
-    description: `FScale your business with confidence and precision.
+    description: `Scale your business with confidence and precision.
      Our business scaling services provide you with the strategies and frameworks needed to manage growth effectively,
      maintain quality, and expand your operations.
      We help you navigate the challenges of scaling to reach new markets and increase your market share.`,
