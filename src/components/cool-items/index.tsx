@@ -16,10 +16,10 @@ function IconWrapper({ Icon }: { Icon: React.FunctionComponent<React.SVGProps<SV
 
 function CoolItem({ title, description, Icon }: CoolItemProps) {
   return (
-    <div className={tw(`w-full border-b md:w-1/2 md:border-r lg:w-1/3 p-8`)}>
-      <div className={tw(`flex items-center mb-6`)}>
+    <div className={tw(`w-full border-b md:border-r p-4 md:p-6 lg:p-8`)}>
+      <div className={tw(`flex items-center mb-4 md:mb-6`)}>
         <IconWrapper Icon={Icon} />
-        <div className={tw(`ml-4 text-xl`)}>{title}</div>
+        <div className={tw(`ml-4 text-lg md:text-xl`)}>{title}</div>
       </div>
       <p className={tw(`leading-loose text-gray-500`)}>{description}</p>
     </div>
