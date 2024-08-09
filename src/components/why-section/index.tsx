@@ -34,7 +34,7 @@ function WhySection() {
           <div className={tw(`mb-16 text-center`)}>
             <p className={tw(`mt-2 text-5xl lg:text-7xl font-bold tracking-tight text-gray-900`)}>Why Choose Exegov?</p>
           </div>
-          <div className={tw(`flex flex-wrap my-12`)}>
+          <div className={tw(`grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 my-12`)}>
             {features.map((feature) => (
               <CoolItem
                 key={feature.title}
