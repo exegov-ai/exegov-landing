@@ -31,14 +31,16 @@ function ContactSection() {
       <div className={tw(`relative max-w-7xl mx-auto mb-24`)}>
         <div className={tw(`overflow-hidden lg:max-w-none lg:flex`)}>
           <div className={tw(`py-8 px-6 md:px-0 lg:flex-shrink-1`)}>
-            <h2 className={tw(`text-4xl lg:text-7xl font-bold text-gray-800 mb-12`)}>Get in Touch with Exegov.ai</h2>
-            <p className={tw(`mt-6 text-base leading-6 text-gray-500`)}>
-              At Exegov.ai , we believe in the power of collaboration and open communication. Whether you&apos;re
+            <h2 className={tw(`text-4xl lg:text-7xl font-bold text-gray-800 mb-12 md:px-6 lg:px-8`)}>
+              Get in Touch with Exegov.ai
+            </h2>
+            <p className={tw(`mt-6 text-base leading-6 text-gray-500 md:px-6 lg:px-8`)}>
+              At Exegov.ai, we believe in the power of collaboration and open communication. Whether you&apos;re
               navigating the early stages of your startup journey or scaling new heights, your insights and experiences
               are invaluable to us. We&apos;re committed to creating a platform that not only meets but exceeds your
               expectations. That&apos;s why we&apos;re always here to listen.
             </p>
-            <div className={tw(`mt-8`)}>
+            <div className={tw(`mt-8 md:px-6 lg:px-8`)}>
               <div className={tw(`flex items-center`)}>
                 <div>
                   <h3
@@ -60,7 +62,7 @@ function ContactSection() {
                 >
                   <Button primary>Feedback</Button>
                 </a>
-                <p className={tw(`mt-4 text-sm text-gray-700`)}>
+                <p className={tw(`mt-4 text-sm text-gray-700 md:px-6 lg:px-8`)}>
                   Have feedback or suggestions? Encountered a bug within our tool? Or simply have a question about how
                   {` `}
                   <a href="http://Exegov.ai" className={tw(`text-indigo-600 underline`)}>
@@ -71,7 +73,7 @@ function ContactSection() {
                   helping us enhance our platform and services. Here’s how you can reach out:
                 </p>
               </div>
-              <ul className={tw(`mt-8 lg:grid lg:grid-cols-2`)}>
+              <ul className={tw(`mt-8 lg:grid lg:grid-cols-2 md:px-6 lg:px-8`)}>
                 {features.map((feature) => (
                   <li className={tw(`flex items-start lg:col-span-1`)} key={feature.header}>
                     <div className={tw(`flex-shrink-0`)}>
