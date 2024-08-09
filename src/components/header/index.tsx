@@ -31,12 +31,38 @@ function Header() {
       <div className={tw(`flex justify-center w-full`)}>
         <div className={tw(`mt-4 w-50`)}>
           <p className={tw(`font-mono uppercase text-center font-medium text-sm text-gray-600`)}>Trusted by</p>
-          <div className={tw(`grid grid-cols-2 gap-20 justify-items-center align-items-center`)}>
-            <Aragon />
-            <Bnp />
-            <Fiserv />
-            <TenClouds />
-            <Orange />
+          <div
+            className={tw(`
+              grid
+              sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-5
+              gap-20 justify-items-center items-center px-28 py-10 max-w-7xl
+            `)}
+          >
+            <div className="sm:col-span-2 md:col-span-2 lg:col-span-1">
+              <Aragon width="100%" />
+            </div>
+            <div className="sm:col-span-2 md:col-span-2 lg:col-span-1">
+              <Bnp width="100%" />
+            </div>
+            <div className="sm:col-span-2 md:col-span-2 lg:col-span-1">
+              <Fiserv width="100%" />
+            </div>
+            <div
+              className={tw(`
+                flex items-center justify-center mx-auto
+                sm:col-span-2 md:col-start-1 md:col-end-4 lg:col-span-1
+              `)}
+            >
+              <TenClouds width="100%" />
+            </div>
+            <div
+              className={tw(`
+                flex items-center justify-center mx-auto
+                sm:col-span-4 md:col-start-4 md:col-end-7 lg:col-span-1
+              `)}
+            >
+              <Orange width="50%" />
+            </div>
           </div>
         </div>
       </div>
