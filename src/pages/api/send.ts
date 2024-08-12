@@ -16,7 +16,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   const { data, error } = await resend.emails.send({
     from: `Acme <onboarding@resend.dev>`,
-    to: [`delivered@resend.dev`],
+    to: [process.env.EMAIL_RECEIVER ?? `delivered@resend.dev`],
     subject: `Hello world`,
     react: EmailTemplate(emailTemplateArgs),
   });
