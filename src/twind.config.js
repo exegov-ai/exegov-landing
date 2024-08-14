@@ -1,4 +1,8 @@
-export default {
+import { defineConfig } from '@twind/core';
+import presetTailwind from '@twind/preset-tailwind';
+import presetTailwindForms from '@twind/preset-tailwind-forms';
+
+export default defineConfig({
   theme: {
     extend: {
       fontFamily: {
@@ -8,4 +12,5 @@ export default {
       },
     },
   },
-};
+  presets: [presetTailwind(/* options */), presetTailwindForms(/* options */)],
+});
