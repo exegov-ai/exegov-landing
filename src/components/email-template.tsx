@@ -1,15 +1,15 @@
 import * as React from 'react';
 
-interface EmailTemplateProps {
+type EmailTemplateProps = {
   firstName: string;
   lastName: string;
   email: string;
   phone: string;
+  company: string;
   message: string;
-  additionalDetails?: string;
-}
+};
 
-export function EmailTemplate({ firstName, lastName, email, phone, message, additionalDetails }: EmailTemplateProps) {
+export function EmailTemplate({ firstName, lastName, email, phone, company, message }: EmailTemplateProps) {
   return (
     <div>
       <h1>Hi Bart!</h1>
@@ -18,8 +18,12 @@ export function EmailTemplate({ firstName, lastName, email, phone, message, addi
       </p>
       <p>Email: {email}</p>
       <p>Phone: {phone}</p>
+      <p>Company: {company}</p>
       <p>Message: {message}</p>
-      {additionalDetails && <p>Additional Details: {additionalDetails}</p>}
+
+      <p>
+        Best, {firstName} {lastName} {company}
+      </p>
     </div>
   );
 }

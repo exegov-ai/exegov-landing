@@ -2,9 +2,34 @@
 
 'use client';
 
+import { FormEvent } from 'react';
 import { tw } from 'twind';
 
+// type ContactFormRequest = {
+//   firstName: string;
+//   lastName: string;
+//   email: string;
+//   phone: string;
+//   company: string;
+//   message: string;
+// };
+
 export default function ContactForm() {
+  async function handleOnSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+
+    const response = await fetch(`/api/send`, {
+      method: `POST`,
+      body: formData,
+    });
+
+    // Handle response if necessary
+    const data = await response.json();
+    console.log(data, Object.fromEntries(formData));
+  }
+
   return (
     <div className={tw(`isolate inset-0 relative bg-white px-6 py-1 sm:py-2 lg:px-8`)} style={{ clipPath: `inset(0)` }}>
       <div
@@ -29,16 +54,16 @@ export default function ContactForm() {
           `)}
         />
       </div>
-      <form action="#" method="POST" className={tw(`mx-auto mt-16 max-w-xl sm:mt-20`)}>
+      <form method="POST" className={tw(`mx-auto mt-16 max-w-xl sm:mt-20`)} onSubmit={handleOnSubmit}>
         <div className={tw(`grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2`)}>
           <div>
-            <label htmlFor="first-name" className={tw(`block text-sm font-semibold leading-6 text-gray-900`)}>
+            <label htmlFor="firstName" className={tw(`block text-sm font-semibold leading-6 text-gray-900`)}>
               First name *
             </label>
             <div className={tw(`mt-2.5`)}>
               <input
-                id="first-name"
-                name="first-name"
+                id="firstName"
+                name="firstName"
                 type="text"
                 required
                 autoComplete="given-name"
@@ -52,13 +77,13 @@ export default function ContactForm() {
             </div>
           </div>
           <div>
-            <label htmlFor="last-name" className={tw(`block text-sm font-semibold leading-6 text-gray-900`)}>
+            <label htmlFor="lastName" className={tw(`block text-sm font-semibold leading-6 text-gray-900`)}>
               Last name
             </label>
             <div className={tw(`mt-2.5`)}>
               <input
-                id="last-name"
-                name="last-name"
+                id="lastName"
+                name="lastName"
                 type="text"
                 autoComplete="family-name"
                 placeholder="Doe"
@@ -115,8 +140,8 @@ export default function ContactForm() {
             </label>
             <div className={tw(`relative mt-2.5`)}>
               <input
-                id="phone-number"
-                name="phone-number"
+                id="phone"
+                name="phone"
                 type="tel"
                 autoComplete="tel"
                 placeholder="+1 123 456 7890"

@@ -78,9 +78,9 @@
     "ts-jest": "29.2.4",
     "typescript": "5.4.3"
   },
-   "resolutions": {
-      "strip-ansi": "^6.0.0",
-      "string-width": "^4.2.3"
+  "resolutions": {
+    "strip-ansi": "^6.0.0",
+    "string-width": "^4.2.3"
   },
   "config": {
     "commitizen": {
