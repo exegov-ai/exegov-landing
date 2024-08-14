@@ -1,3 +1,6 @@
+import presetTailwind from '@twind/preset-tailwind';
+import presetTailwindForms from '@twind/preset-tailwind-forms';
+
 export default {
   theme: {
     extend: {
@@ -8,4 +11,5 @@ export default {
       },
     },
   },
+  presets: [presetTailwind(/* options */), presetTailwindForms(/* options */)],
 };

@@ -3,11 +3,11 @@ import { AppProps } from 'next/app';
 import '@/styles/global.css';
 import '@fontsource/inter';
 
-import { setup } from 'twind';
+import { install } from '@twind/core';
 import twindConfig from '../twind.config';
 
 if (typeof window !== `undefined`) {
-  setup(twindConfig);
+  install(twindConfig);
 }
 
 export default function MyApp({ Component, pageProps }: AppProps) {

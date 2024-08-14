@@ -19,12 +19,12 @@ const signUpUrl = `https://app.exegov.ai/users/sign_up`;
 
 const links = [
   {
-    label: `Features`,
-    href: `features`,
+    label: `Services`,
+    href: `services`,
   },
   {
-    label: `Security`,
-    href: `security`,
+    label: `Why`,
+    href: `why`,
   },
   {
     label: `Contacts us`,
