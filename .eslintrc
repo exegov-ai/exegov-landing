@@ -60,6 +60,7 @@
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/explicit-module-boundary-types": "off",
         "no-use-before-define": [0],
+        "no-underscore-dangle": ["error", { "allowAfterThis": true }],
         "@typescript-eslint/no-use-before-define": [1],
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-var-requires": "off",
@@ -79,6 +80,7 @@
       }
     }
   ],
+  "ignorePatterns": ["node_modules/", "build/", "dist/", "**/__tests__/**"],
   "settings": {
     "import/resolver": {
       "typescript": {

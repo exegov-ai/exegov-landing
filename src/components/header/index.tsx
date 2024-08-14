@@ -17,7 +17,7 @@ function Header() {
         <div className={tw(`max-w-xl lg:max-w-3xl mx-auto`)}>
           <h1
             className={tw(
-              `font-sans font-bold text-4xl md:text-5xl lg:text-8xl text-center leading-snug text-gray-800`,
+              `font-sans font-bold text-4xl md:text-5xl lg:text-7xl text-center leading-snug text-gray-800`,
             )}
           >
             Your Trusted Partner in Business Growth
@@ -38,13 +38,13 @@ function Header() {
               gap-20 justify-items-center items-center px-28 py-10 max-w-7xl
             `)}
           >
-            <div className="sm:col-span-2 md:col-span-2 lg:col-span-1">
+            <div className={tw(`sm:col-span-2 md:col-span-2 lg:col-span-1`)}>
               <Aragon width="100%" />
             </div>
-            <div className="sm:col-span-2 md:col-span-2 lg:col-span-1">
+            <div className={tw(`sm:col-span-2 md:col-span-2 lg:col-span-1`)}>
               <Bnp width="100%" />
             </div>
-            <div className="sm:col-span-2 md:col-span-2 lg:col-span-1">
+            <div className={tw(`sm:col-span-2 md:col-span-2 lg:col-span-1`)}>
               <Fiserv width="100%" />
             </div>
             <div
