@@ -6,9 +6,11 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  if (req.method !== `POST`) {
-    return res.status(405).json({ error: `Method Not Allowed` });
-  }
+  // TODO: Consider using server actions
+
+  // if (req.method !== `POST`) {
+  //   return res.status(405).json({ error: `Method Not Allowed` });
+  // }
   const emailTemplateArgs = {
     firstName: `test`,
     lastName: `lastName`,
