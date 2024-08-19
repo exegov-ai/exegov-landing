@@ -2,8 +2,8 @@
 
 'use client';
 
-import { FormEvent } from 'react';
 import { tw } from 'twind';
+import { sendEmail } from '@/lib/actions';
 
 // type ContactFormRequest = {
 //   firstName: string;
@@ -15,21 +15,6 @@ import { tw } from 'twind';
 // };
 
 export default function ContactForm() {
-  async function handleOnSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
-    const formData = new FormData(event.currentTarget);
-
-    const response = await fetch(`/api/send`, {
-      method: `POST`,
-      body: formData,
-    });
-
-    // Handle response if necessary
-    const data = await response.json();
-    console.log(data, Object.fromEntries(formData));
-  }
-
   return (
     <div className={tw(`isolate inset-0 relative bg-white px-6 py-1 sm:py-2 lg:px-8`)} style={{ clipPath: `inset(0)` }}>
       <div
@@ -54,7 +39,7 @@ export default function ContactForm() {
           `)}
         />
       </div>
-      <form method="POST" className={tw(`mx-auto mt-16 max-w-xl sm:mt-20`)} onSubmit={handleOnSubmit}>
+      <form action={sendEmail} className={tw(`mx-auto mt-16 max-w-xl sm:mt-20`)}>
         <div className={tw(`grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2`)}>
           <div>
             <label htmlFor="firstName" className={tw(`block text-sm font-semibold leading-6 text-gray-900`)}>
