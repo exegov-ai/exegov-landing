@@ -1,4 +1,3 @@
-import { tw } from 'twind';
 import Facebook from '@/constants/svg/facebook.svg';
 import Linkedin from '@/constants/svg/linkedin.svg';
 import Twitter from '@/constants/svg/twitterx.svg';
@@ -9,8 +8,8 @@ import Logo from '@/components/logo';
 
 function Footer() {
   return (
-    <footer id="contact" className={tw(`bg-white border-t border-gray-400 pt-14 pb-16`)}>
-      <div className={tw(`max-w-7xl mx-auto text-gray-400 px-8 lg:px-0 flex flex-wrap items-center justify-between`)}>
+    <footer id="contact" className="bg-white border-t border-gray-400 pt-14 pb-16">
+      <div className="max-w-7xl mx-auto text-gray-400 px-8 lg:px-0 flex flex-wrap items-center justify-between">
         <Logo />
         <FlexBrands
           brands={{
