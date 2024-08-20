@@ -6,6 +6,7 @@ import { SendEmailStatuses, TSendEmailState, TSendEmailStatus } from '@/lib/acti
 
 import { useActionState } from 'react';
 import { useFormStatus } from 'react-dom';
+import Spinner from '../spinner';
 
 type TContactFormProps = {
   sendEmailAction: typeof SendEmailAction;
@@ -24,6 +25,12 @@ function Submit({ buttonMessage, status }: TSubmitProps) {
   const { pending } = useFormStatus();
   const isDisabled = pending || status === SendEmailStatuses.success;
 
+  const spinner = pending ? (
+    <span className="-translate-x-7">
+      <Spinner />
+    </span>
+  ) : null;
+
   return (
     <button
       type="submit"
@@ -36,7 +43,10 @@ function Submit({ buttonMessage, status }: TSubmitProps) {
           ${!isDisabled && `hover:bg-indigo-500`}
         `}
     >
-      {buttonMessage}
+      <span className="flex justify-center relative">
+        {spinner}
+        {buttonMessage}
+      </span>
     </button>
   );
 }
