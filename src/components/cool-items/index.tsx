@@ -1,7 +1,7 @@
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import Image from 'next/image';
 
-import styles from './index.module.css';
+import styles from './styles.module.css';
 
 interface CoolItemProps {
   title: string;

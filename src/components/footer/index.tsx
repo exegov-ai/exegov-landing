@@ -2,7 +2,6 @@ import Facebook from '@/constants/svg/facebook.svg';
 import Linkedin from '@/constants/svg/linkedin.svg';
 import Twitter from '@/constants/svg/twitterx.svg';
 import Github from '@/constants/svg/github.svg';
-import { EXEGOV_BLUE } from '@/constants/values/colors';
 import FlexBrands from '@/components/flex-brands';
 import Logo from '@/components/logo';
 
@@ -13,7 +12,6 @@ function Footer() {
         <Logo />
         <FlexBrands
           brands={{
-            fill: EXEGOV_BLUE,
             items: [
               { icon: Facebook, url: `https://www.facebook.com/profile.php?id=61553821341662`, label: `fb` },
               { icon: Linkedin, url: `https://www.linkedin.com/company/99021822/admin/feed/posts/`, label: `linkedin` },
