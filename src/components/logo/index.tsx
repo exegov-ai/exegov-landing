@@ -1,3 +1,5 @@
+'use client';
+
 import { EXEGOV_BLUE } from '@/constants/values/colors';
 
 function Logo() {

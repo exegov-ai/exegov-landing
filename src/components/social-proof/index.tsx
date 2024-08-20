@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import Quote from '@/constants/svg/quote.svg';
 

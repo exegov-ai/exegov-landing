@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Bnp from '@/constants/svg/BNP.svg';
 import Aragon from '@/constants/svg/aragon.svg';
 import Fiserv from '@/constants/svg/Fiserv_logo.svg';
@@ -29,13 +30,19 @@ function Header() {
             `}
           >
             <div className="sm:col-span-2 md:col-span-2 lg:col-span-1">
-              <Aragon width="100%" />
+              <div className="w-full">
+                <Image src={Aragon} alt="Aragon logo" />
+              </div>
             </div>
             <div className="sm:col-span-2 md:col-span-2 lg:col-span-1">
-              <Bnp width="100%" />
+              <div className="w-full">
+                <Image src={Bnp} alt="BNP logo" />
+              </div>
             </div>
             <div className="sm:col-span-2 md:col-span-2 lg:col-span-1">
-              <Fiserv width="100%" />
+              <div className="w-full">
+                <Image src={Fiserv} alt="Fiserv logo" />
+              </div>
             </div>
             <div
               className={`
@@ -43,7 +50,9 @@ function Header() {
                 sm:col-span-2 md:col-start-1 md:col-end-4 lg:col-span-1
               `}
             >
-              <TenClouds width="100%" />
+              <div className="w-full">
+                <Image src={TenClouds} alt="TenClouds logo" />
+              </div>
             </div>
             <div
               className={`
@@ -51,7 +60,9 @@ function Header() {
                 sm:col-span-4 md:col-start-4 md:col-end-7 lg:col-span-1
               `}
             >
-              <Orange width="50%" />
+              <div className="w-1/2">
+                <Image src={Orange} alt="Orange logo" />
+              </div>
             </div>
           </div>
         </div>

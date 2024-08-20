@@ -1,22 +1,18 @@
+'use client';
+
 import { useState } from 'react';
 import Button from '@/components/button';
+import MenuButton from './MenuButton';
+import MobileMenu from './MobileMenu';
 
-interface IMenuButton {
-  toggleMenu: React.MouseEventHandler<HTMLButtonElement>;
-  showMenu: boolean;
-}
+export type TScrollToSection = (event: React.MouseEvent, sectionId: string) => void;
 
-type ScrollToSection = (event: React.MouseEvent, sectionId: string) => void;
-
-type Link = {
+export type TLink = {
   label: string;
   href: string;
 };
 
-const loginUrl = `https://app.exegov.ai/users/sign_in`;
-const signUpUrl = `https://app.exegov.ai/users/sign_up`;
-
-const links = [
+export const links = [
   {
     label: `Services`,
     href: `services`,
@@ -31,95 +27,11 @@ const links = [
   },
 ];
 
-const secondaryLinks = [
-  {
-    label: `Log in`,
-    href: loginUrl,
-  },
-  {
-    label: `Get Started`,
-    href: signUpUrl,
-  },
-];
-
-function MenuButton({ toggleMenu, showMenu }: IMenuButton) {
-  return (
-    <button
-      type="button"
-      aria-controls="mobile-menu"
-      aria-expanded={showMenu}
-      onClick={toggleMenu}
-      className="p-2 text-gray-400"
-    >
-      <span className="sr-only">Open menu</span>
-      {showMenu ? (
-        <svg
-          className="h-6 w-6"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          aria-hidden="true"
-          width={24}
-          height={24}
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      ) : (
-        <svg
-          className="h-6 w-6"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          aria-hidden="true"
-          width={24}
-          height={24}
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      )}
-    </button>
-  );
-}
-
-function MobileMenu({ scrollToSection }: { scrollToSection: ScrollToSection }) {
-  return (
-    <div className="md:hidden">
-      <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        {links.map((link: Link) => (
-          <a
-            href={link.href}
-            onClick={(event) => scrollToSection(event, link.href)}
-            className="text-gray-500 block px-3 py-2 text-base font-medium"
-            key={link.label}
-          >
-            {link.label}
-          </a>
-        ))}
-      </div>
-      <div className="pt-4 pb-3 border-t border-gray-400">
-        <div className="px-2 space-y-1">
-          {secondaryLinks.map((link: Link) => (
-            <a
-              key={`mobile-${link.label}`}
-              href={link.href}
-              className="block px-3 py-2 text-base font-medium text-gray-500"
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function Navigation() {
   const [showMenu, setShowMenu] = useState(false);
   const toggleMenu = () => setShowMenu(!showMenu);
 
-  const scrollToSection: ScrollToSection = (event, sectionId) => {
+  const scrollToSection: TScrollToSection = (event, sectionId) => {
     event.preventDefault();
     document.getElementById(sectionId)?.scrollIntoView({ behavior: `smooth` });
   };
@@ -133,7 +45,7 @@ function Navigation() {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                {links.map((link: Link) => (
+                {links.map((link: TLink) => (
                   <a
                     key={link.label}
                     href={link.href}
@@ -148,10 +60,7 @@ function Navigation() {
           </div>
           <div className="hidden md:block">
             <div className="ml-4 flex items-center md:ml-6">
-              <a href={loginUrl} target="_blank" rel="noopener noreferrer">
-                <Button modifier="border-0 mr-2">Log in</Button>
-              </a>
-              <a href={signUpUrl} target="_blank" rel="noopener noreferrer">
+              <a target="_blank" rel="noopener noreferrer">
                 <Button primary>Get started</Button>
               </a>
             </div>

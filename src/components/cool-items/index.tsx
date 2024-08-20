@@ -1,13 +1,20 @@
+import { StaticImport } from 'next/dist/shared/lib/get-img-props';
+import Image from 'next/image';
+
+import styles from './index.module.css';
+
 interface CoolItemProps {
   title: string;
   description: string;
-  Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+  Icon: StaticImport;
 }
 
-function IconWrapper({ Icon }: { Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>> }) {
+function IconWrapper({ Icon }: { Icon: StaticImport }) {
   return (
     <div className="w-5 h-5 flex-shrink-0">
-      <Icon width="100%" height="100%" fill="indigo" />
+      <div className="w-full">
+        <Image src={Icon} alt="Icon" className={styles.icon} />
+      </div>
     </div>
   );
 }

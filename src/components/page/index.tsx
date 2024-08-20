@@ -1,16 +1,19 @@
-import Head from 'next/head';
 import Navigation from '@/components/navigation';
+import { Metadata } from 'next';
 
-interface IProps {
+type TProps = {
   children: React.ReactNode;
-}
+};
 
-function Page({ children }: IProps) {
+export const metadata: Metadata = {
+  icons: {
+    icon: `/logo.svg`,
+  },
+};
+
+function Page({ children }: TProps) {
   return (
     <div>
-      <Head>
-        <link rel="icon" href="/logo.svg" />
-      </Head>
       <div className="min-h-screen flex flex-col">
         <Navigation />
         {children}
