@@ -21,10 +21,6 @@ export const links = [
     label: `Why`,
     href: `why`,
   },
-  {
-    label: `Contacts us`,
-    href: `contact`,
-  },
 ];
 
 function Navigation() {
@@ -46,23 +42,23 @@ function Navigation() {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 {links.map((link: TLink) => (
-                  <a
+                  <button
+                    type="button"
                     key={link.label}
-                    href={link.href}
                     onClick={(event) => scrollToSection(event, link.href)}
                     className="text-gray-500 hover:text-gray-600 px-3 py-2 rounded-md font-medium"
                   >
                     {link.label}
-                  </a>
+                  </button>
                 ))}
               </div>
             </div>
           </div>
           <div className="hidden md:block">
             <div className="ml-4 flex items-center md:ml-6">
-              <a target="_blank" rel="noopener noreferrer">
-                <Button primary>Get started</Button>
-              </a>
+              <Button onClick={(event) => scrollToSection(event, `contact-us`)} primary>
+                Contact Us
+              </Button>
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">

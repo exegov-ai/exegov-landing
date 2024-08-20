@@ -3,7 +3,7 @@ import ContactForm from './ContactForm';
 
 function ContactSection() {
   return (
-    <section className="bg-gradient-to-b from-gray-100 to-white shadow-inner pt-12">
+    <section id="contact-us" className="bg-gradient-to-b from-gray-100 to-white shadow-inner pt-12">
       <div className="relative max-w-7xl mx-auto mb-24">
         <div className="overflow-hidden lg:max-w-none lg:flex">
           <div className="py-8 px-6 md:px-0 lg:flex-shrink-1">
