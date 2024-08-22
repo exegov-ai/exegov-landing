@@ -1,7 +1,7 @@
 import Navigation from '@/components/navigation';
 import { Metadata } from 'next';
 
-type TProps = {
+type TPageProps = {
   children: React.ReactNode;
 };
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
 };
 
-function Page({ children }: TProps) {
+function Page({ children }: TPageProps) {
   return (
     <div>
       <div className="min-h-screen flex flex-col">

@@ -11,6 +11,7 @@ function MenuButton({ toggleMenu, showMenu }: TMenuButton) {
       type="button"
       aria-controls="mobile-menu"
       aria-expanded={showMenu}
+      aria-label={showMenu ? `Close menu` : `Open menu`}
       onClick={toggleMenu}
       className="p-2 text-gray-400"
     >

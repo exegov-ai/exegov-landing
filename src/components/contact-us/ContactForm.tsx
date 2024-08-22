@@ -6,6 +6,7 @@ import { SendEmailStatuses, TSendEmailState, TSendEmailStatus } from '@/lib/acti
 
 import { useActionState } from 'react';
 import { useFormStatus } from 'react-dom';
+import { getCaptchaToken } from '@/utils/captcha';
 import Spinner from '../spinner';
 
 type TContactFormProps = {
@@ -52,7 +53,10 @@ function Submit({ buttonMessage, status }: TSubmitProps) {
 }
 
 export default function ContactForm({ sendEmailAction }: TContactFormProps) {
-  const [state, sendEmail] = useActionState(sendEmailAction, initialState);
+  const [state, sendEmail] = useActionState(async (prevState: TSendEmailState, formData: FormData) => {
+    const token = await getCaptchaToken();
+    return sendEmailAction(prevState, formData, token);
+  }, initialState);
 
   return (
     <form action={sendEmail} className="mx-auto mt-16 max-w-xl sm:mt-20">
