@@ -4,7 +4,7 @@ import { sendEmail as SendEmailAction } from '@/lib/actions/sendEmail';
 import { SendEmailStatuses, TSendEmailState, TSendEmailStatus } from '@/lib/actions/sendEmail.types';
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
-import { useActionState } from 'react';
+import { useActionState, useEffect, useState } from 'react';
 import { useFormStatus } from 'react-dom';
 import { getCaptchaToken } from '@/utils/captcha';
 import Spinner from '../spinner';
@@ -18,7 +18,7 @@ type TSubmitProps = {
   status?: TSendEmailStatus;
 };
 
-const initialState: TSendEmailState = {
+const initialActionState: TSendEmailState = {
   message: ``,
 };
 
@@ -53,10 +53,32 @@ function Submit({ buttonMessage, status }: TSubmitProps) {
 }
 
 export default function ContactForm({ sendEmailAction }: TContactFormProps) {
-  const [state, sendEmail] = useActionState(async (prevState: TSendEmailState, formData: FormData) => {
+  const [actionState, sendEmail] = useActionState(async (prevState: TSendEmailState, formData: FormData) => {
     const token = await getCaptchaToken();
     return sendEmailAction(prevState, formData, token);
-  }, initialState);
+  }, initialActionState);
+
+  const [formState, setFormState] = useState({
+    firstName: ``,
+    lastName: ``,
+    company: ``,
+    email: ``,
+    phone: ``,
+    message: ``,
+  });
+
+  useEffect(() => {
+    if (actionState.status === SendEmailStatuses.success) {
+      setFormState({
+        firstName: ``,
+        lastName: ``,
+        company: ``,
+        email: ``,
+        phone: ``,
+        message: ``,
+      });
+    }
+  }, [actionState.status]);
 
   return (
     <form action={sendEmail} className="mx-auto mt-16 max-w-xl sm:mt-20">
@@ -71,6 +93,8 @@ export default function ContactForm({ sendEmailAction }: TContactFormProps) {
               name="firstName"
               type="text"
               required
+              value={formState.firstName}
+              onChange={(e) => setFormState({ ...formState, firstName: e.currentTarget.value })}
               autoComplete="given-name"
               placeholder="John"
               className={`
@@ -90,6 +114,8 @@ export default function ContactForm({ sendEmailAction }: TContactFormProps) {
               id="lastName"
               name="lastName"
               type="text"
+              value={formState.lastName}
+              onChange={(e) => setFormState({ ...formState, lastName: e.currentTarget.value })}
               autoComplete="family-name"
               placeholder="Doe"
               className={`
@@ -109,6 +135,8 @@ export default function ContactForm({ sendEmailAction }: TContactFormProps) {
               id="company"
               name="company"
               type="text"
+              value={formState.company}
+              onChange={(e) => setFormState({ ...formState, company: e.currentTarget.value })}
               autoComplete="organization"
               placeholder="ABC Inc."
               className={`
@@ -129,6 +157,8 @@ export default function ContactForm({ sendEmailAction }: TContactFormProps) {
               name="email"
               type="email"
               required
+              value={formState.email}
+              onChange={(e) => setFormState({ ...formState, email: e.currentTarget.value })}
               autoComplete="email"
               placeholder="john.doe@example.com"
               className={`
@@ -148,6 +178,8 @@ export default function ContactForm({ sendEmailAction }: TContactFormProps) {
               id="phone"
               name="phone"
               type="tel"
+              value={formState.phone}
+              onChange={(e) => setFormState({ ...formState, phone: e.currentTarget.value })}
               autoComplete="tel"
               placeholder="+1 123 456 7890"
               className={`
@@ -166,6 +198,8 @@ export default function ContactForm({ sendEmailAction }: TContactFormProps) {
             <textarea
               id="message"
               name="message"
+              value={formState.message}
+              onChange={(e) => setFormState({ ...formState, message: e.currentTarget.value })}
               rows={4}
               placeholder="Type your message here..."
               className={`
@@ -173,13 +207,12 @@ export default function ContactForm({ sendEmailAction }: TContactFormProps) {
                   ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2
                   focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6
                 `}
-              defaultValue=""
             />
           </div>
         </div>
       </div>
       <div className="mt-10">
-        <Submit buttonMessage={state.message || `Send message`} status={state.status} />
+        <Submit buttonMessage={actionState.message || `Send message`} status={actionState.status} />
       </div>
     </form>
   );
