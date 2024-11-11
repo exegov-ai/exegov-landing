@@ -11,11 +11,13 @@ function Header() {
       <div className="max-w-4xl mx-auto py-16 px-14 sm:px-6 lg:px-8">
         <div className="max-w-xl lg:max-w-3xl mx-auto">
           <h1 className="font-sans font-bold text-4xl md:text-5xl lg:text-7xl text-center leading-snug text-gray-800">
-            Your Trusted Partner in Business Growth
+            Empowering Your Startup Journey
           </h1>
           <p className="mt-10 text-gray-500 text-center text-xl lg:text-3xl">
-            Combining traditional consulting expertise with cutting-edge AI technology to support your growth and
-            success at every stage.
+            In the world of startups, every decision, every strategy, and every innovation counts. That&apos;s where
+            exegov.ai steps in—your AI-powered companion designed to navigate the complexities of growing your business.
+            From ideation to execution, exegov.ai equips you with the tools and insights you need to thrive in the
+            competitive startup landscape.
           </p>
         </div>
       </div>
