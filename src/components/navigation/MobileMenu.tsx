@@ -4,7 +4,7 @@ import { links, TLink, TScrollToSection } from '.';
 
 const secondaryLinks = [
   {
-    label: `Contact Us`,
+    label: `Request Demo`,
     href: `contact-us`,
   },
 ];

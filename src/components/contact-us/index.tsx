@@ -24,7 +24,7 @@ function ContactSection() {
                       flex-shrink-0 pr-4 text-sm leading-5tracking-wider font-semibold uppercase text-indigo-600
                     `}
                   >
-                    Contact Us
+                    Request Demo
                   </h3>
                 </div>
                 <div className="flex-1 border-t-2 border-gray-200" />

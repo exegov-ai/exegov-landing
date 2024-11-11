@@ -14,7 +14,7 @@ export type TLink = {
 
 export const links = [
   {
-    label: `Services`,
+    label: `Features`,
     href: `services`,
   },
   {
@@ -57,7 +57,7 @@ function Navigation() {
           <div className="hidden md:block">
             <div className="ml-4 flex items-center md:ml-6">
               <Button onClick={(event) => scrollToSection(event, `contact-us`)} primary>
-                Contact Us
+                Request Demo
               </Button>
             </div>
           </div>
